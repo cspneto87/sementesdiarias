@@ -23,7 +23,7 @@
     .card{box-shadow:0 20px 35px rgba(2,6,23,.08)}
     .soft{box-shadow:0 10px 24px rgba(2,6,23,.08)}
     .hero{
-      background:radial-gradient(1200px 500px at 20% -10%, rgba(255,255,255,.8), rgba(255,255,255,.95)),url('https://i.imgur.com/lXYk2l2.jpeg);
+      background:radial-gradient(1200px 500px at 20% -10%, rgba(255,255,255,.8), rgba(255,255,255,.95)),url('https://i.imgur.com/lXYk2l2.jpeg');
       background-size:cover;background-position:center right;
     }
     .badge{box-shadow:0 4px 10px rgba(21,128,61,.18)}
@@ -31,13 +31,17 @@
     .grad{background: linear-gradient(180deg, #0ea55a 0%, #0a9150 60%, #0a7f45 100%)}
     .price-grad{background:linear-gradient(180deg,#facc15 0%, #f59e0b 30%, #16a34a 100%)}
     .footer-grad{background:#0b1020}
+
+    /* helper para iframe responsivo (16:9) */
+    .video-wrap{position:relative;width:100%;padding-bottom:56.25%;border-radius:16px;overflow:hidden;box-shadow:0 10px 24px rgba(2,6,23,.08);border:1px solid #e5e7eb;background:#000}
+    .video-wrap iframe{position:absolute;inset:0;width:100%;height:100%}
   </style>
 </head>
 <body>
   <!-- Top Bar -->
   <div class="w-full text-[13px] text-emerald-900 bg-emerald-50 border-b border-emerald-100">
     <div class="container mx-auto px-4 py-2 flex items-center gap-2">
-      <span class="inline-flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-[var(--orange)]"></span>Perfeito para a rotina de 5 minutos ao dia</span>
+      <span class="inline-flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-[var(--orange)]"></span>Perfeito para uma rotina de 5 minutos ao dia</span>
     </div>
   </div>
 
@@ -75,16 +79,28 @@
 
         <div class="mt-6 flex flex-wrap gap-3">
           <a href="#oferta" class="px-5 py-3 rounded-xl bg-[var(--brand)] text-white font-semibold soft">Quero Plantar Sementes Hoje</a>
-          <a href="#conteudo" class="px-5 py-3 rounded-xl border border-zinc-200 font-semibold bg-white">Saber Mais</a>
+        </div>
+
+        <!-- VÍDEO: visível SOMENTE no mobile -->
+        <div class="mt-5 md:hidden">
+          <div class="video-wrap">
+            <iframe
+              src="https://www.youtube.com/embed/oVgsQrCrwJc"
+              title="YouTube video"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
         </div>
 
         <div class="mt-4 flex items-center gap-4 text-sm text-zinc-600">
           <div class="flex -space-x-2">
-            <img class="w-8 h-8 rounded-full border-2 border-white" src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?q=80&w=80&auto=format&fit=crop" alt=""/>
-            <img class="w-8 h-8 rounded-full border-2 border-white" src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?q=80&w=80&auto=format&fit=crop" alt=""/>
-            <img class="w-8 h-8 rounded-full border-2 border-white" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=80&auto=format&fit=crop" alt=""/>
+            <img class="w-8 h-8 rounded-full border-2 border-white" src="https://i.imgur.com/5c5PkPq.png" alt=""/>
+            <img class="w-8 h-8 rounded-full border-2 border-white" src="https://i.imgur.com/EmDogNU.png" alt=""/>
+            <img class="w-8 h-8 rounded-full border-2 border-white" src="https://i.imgur.com/qzy2KVS.png" alt=""/>
           </div>
-          <span>Mais de 4.500 famílias já praticam as sementes diárias</span>
+          <span>Mais de 1.200 famílias já praticam as sementes diárias</span>
         </div>
       </div>
 
@@ -95,7 +111,7 @@
   </section>
 
   <!-- Bloco: Não é um card... -->
-  <section class="py-10">
+  <section id="conteudo" class="py-10">
     <div class="container mx-auto px-4">
       <div class="flex items-start gap-3 max-w-3xl mx-auto">
         <div class="mt-1 text-xl">🟡</div>
@@ -109,7 +125,7 @@
         <div class="p-6 rounded-2xl bg-white border border-zinc-100 card">
           <img class="w-full h-40 object-cover rounded-xl" src="https://i.imgur.com/H7lg5nM.png" alt="Caixinha"/>
           <h4 class="mt-4 font-semibold">Caixinha Encantadora</h4>
-          <p class="text-sm text-zinc-600 mt-1">Modelo para imprimir e montar — cabe certinho no criado‑mudo.</p>
+          <p class="text-sm text-zinc-600 mt-1">Modelo para imprimir e montar — cabe certinho no criado-mudo.</p>
         </div>
         <div class="p-6 rounded-2xl bg-white border border-zinc-100 card">
           <img class="w-full h-40 object-cover rounded-xl" src="https://i.imgur.com/yah7PC3.png" alt="Cards"/>
@@ -117,7 +133,7 @@
           <p class="text-sm text-zinc-600 mt-1">Orações curtas e versículos — 1 por dia ao longo de mais de 3 meses.</p>
         </div>
         <div class="p-6 rounded-2xl bg-white border border-zinc-100 card">
-          <img class="w-full h-40 object-cover rounded-xl" src="https://i.imgur.com/v0O7iz6.png"Guia"/>
+          <img class="w-full h-40 object-cover rounded-xl" src="https://i.imgur.com/v0O7iz6.png" alt="Guia"/>
           <h4 class="mt-4 font-semibold">Guia da Mãe Intencional</h4>
           <p class="text-sm text-zinc-600 mt-1">Atalhos práticos para conduzir o momento com leveza e propósito.</p>
         </div>
@@ -143,7 +159,7 @@
       <div class="grid md:grid-cols-3 gap-6 mt-8">
         <div class="p-6 bg-white border border-zinc-100 rounded-2xl card">
           <div class="flex items-center gap-3">
-            <img class="w-10 h-10 rounded-full" src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?q=80&w=100&auto=format&fit=crop"/>
+            <img class="w-10 h-10 rounded-full" src="https://i.imgur.com/qzy2KVS.png" alt=""/>
             <div>
               <div class="font-semibold">Juliana</div>
               <div class="text-amber-500 text-sm">★★★★★</div>
@@ -153,7 +169,7 @@
         </div>
         <div class="p-6 bg-white border border-zinc-100 rounded-2xl card">
           <div class="flex items-center gap-3">
-            <img class="w-10 h-10 rounded-full" src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?q=80&w=100&auto=format&fit=crop"/>
+            <img class="w-10 h-10 rounded-full" src="https://i.imgur.com/EmDogNU.png" alt=""/>
             <div>
               <div class="font-semibold">Fernanda</div>
               <div class="text-amber-500 text-sm">★★★★★</div>
@@ -163,7 +179,7 @@
         </div>
         <div class="p-6 bg-white border border-zinc-100 rounded-2xl card">
           <div class="flex items-center gap-3">
-            <img class="w-10 h-10 rounded-full" src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?q=80&w=100&auto=format&fit=crop"/>
+            <img class="w-10 h-10 rounded-full" src="https://i.imgur.com/5c5PkPq.png" alt=""/>
             <div>
               <div class="font-semibold">Pricila</div>
               <div class="text-amber-500 text-sm">★★★★★</div>
@@ -249,49 +265,38 @@
       <div class="max-w-2xl mx-auto mt-8 bg-white rounded-3xl border border-zinc-100 card overflow-hidden">
         <!-- Faixa preço -->
         <div class="price-grad text-white px-6 py-6">
-          <div class="text-sm opacity-90 line-through">R$ 97,00</div>
-          <div class="text-3xl md:text-4xl font-extrabold">R$ 17,90</div>
-          <div class="text-xs opacity-90">ou 2x de R$ 9,50 no cartão</div>
+          <div class="text-sm opacity-90 line-through">R$ 37,00</div>
+          <div class="text-3xl md:text-4xl font-extrabold">R$ 13,90</div>
+          <div class="text-xs opacity-90">ou 2x de R$ 6,95 no cartão</div>
           <div class="mt-1 text-[11px] bg-white/20 inline-flex px-2 py-1 rounded">81% de desconto • Por tempo limitado</div>
         </div>
 
-        <!-- Formulário (mock) -->
+        <!-- Formulário (simples) -->
         <div class="p-6">
           <div class="grid md:grid-cols-2 gap-4">
-            <label class="text-sm">Nome completo<input class="mt-1 w-full rounded-xl border border-zinc-200 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-200" placeholder="Seu nome"/></label>
-            <label class="text-sm">Email<input class="mt-1 w-full rounded-xl border border-zinc-200 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-200" placeholder="seu@email.com"/></label>
-            <label class="text-sm">WhatsApp<input class="mt-1 w-full rounded-xl border border-zinc-200 px-3 py-2" placeholder="(00) 00000-0000"/></label>
-            <label class="text-sm">Idade do filho<input class="mt-1 w-full rounded-xl border border-zinc-200 px-3 py-2" placeholder="Ex.: 7 anos"/></label>
-            <label class="text-sm md:col-span-2">Forma de orações preferida
-              <select class="mt-1 w-full rounded-xl border border-zinc-200 px-3 py-2">
-                <option>Sequência diária (1 por dia)</option>
-                <option>Temas por semana</option>
-                <option>Escolher livremente</option>
-              </select>
+            <label class="text-sm">Nome completo
+              <input class="mt-1 w-full rounded-xl border border-zinc-200 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-200" placeholder="Seu nome"/>
+            </label>
+            <label class="text-sm">Email
+              <input type="email" class="mt-1 w-full rounded-xl border border-zinc-200 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-200" placeholder="seu@email.com"/>
+            </label>
+            <label class="text-sm">WhatsApp
+              <input class="mt-1 w-full rounded-xl border border-zinc-200 px-3 py-2" placeholder="(00) 00000-0000"/>
+            </label>
+            <label class="text-sm">Idade do filho
+              <input class="mt-1 w-full rounded-xl border border-zinc-200 px-3 py-2" placeholder="Ex.: 7 anos"/>
             </label>
             <label class="text-sm md:col-span-2">Deixe uma mensagem (opcional)
               <textarea class="mt-1 w-full rounded-xl border border-zinc-200 px-3 py-2" rows="3" placeholder="Compartilhe algo sobre sua família"></textarea>
             </label>
           </div>
 
-          <div class="mt-5 bg-emerald-50 border border-emerald-100 rounded-xl p-4 text-sm">
-            <div class="font-semibold mb-2">O que você vai receber:</div>
-            <ul class="grid md:grid-cols-2 gap-2 text-emerald-900">
-              <li>✅ 100 Cards de Bênçãos (PDF)</li>
-              <li>✅ Caixinha encantadora para montar</li>
-              <li>✅ Guia da Mãe Intencional</li>
-              <li>✅ Versões prontas para A4/A3</li>
-              <li>✅ Suporte por e‑mail</li>
-              <li>✅ Atualizações futuras</li>
-            </ul>
-          </div>
-
-          <a href="#pagar" class="mt-6 inline-flex w-full items-center justify-center gap-2 px-5 py-3 rounded-xl bg-[var(--brand)] text-white font-semibold soft">Quero plantar sementes hoje — R$ 17,90</a>
+          <a href="#pagar" class="mt-6 inline-flex w-full items-center justify-center gap-2 px-5 py-3 rounded-xl bg-[var(--brand)] text-white font-semibold soft">Quero plantar sementes hoje — R$ 13,90</a>
           <div class="text-[12px] text-zinc-500 mt-3 text-center">Pagamento seguro • Acesso imediato • 7 dias de garantia</div>
         </div>
       </div>
 
-      <div class="text-center text-sm text-zinc-600 mt-6">⭐ <span class="font-semibold">5.0</span> de avaliação • Mais de 4.500 famílias</div>
+      <div class="text-center text-sm text-zinc-600 mt-6">⭐ <span class="font-semibold">5.0</span> de avaliação • Mais de 1.200 famílias</div>
     </div>
   </section>
 
