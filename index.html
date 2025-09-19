@@ -12,40 +12,36 @@
     :root{
       --brand:#15803d; /* verde principal */
       --brand2:#16a34a; /* verde claro */
-      --cream:#fff7ed; /* fundo creme */
+      --cream:#fff7ed;  /* fundo creme */
       --purple:#a78bfa; /* roxo claro cartões */
       --orange:#f59e0b; /* laranja ícones/realces */
       --gradient:linear-gradient(90deg,#0ea55a 0%, #0ea5a3 50%, #f59e0b 100%);
     }
     html{scroll-behavior:smooth}
-    body{font-family:'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;background:var(--cream);color:#0f172a}
+    body{font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--cream);color:#0f172a}
     .container{max-width:1120px}
     .card{box-shadow:0 20px 35px rgba(2,6,23,.08)}
     .soft{box-shadow:0 10px 24px rgba(2,6,23,.08)}
     .hero{
-      background:radial-gradient(1200px 500px at 20% -10%, rgba(255,255,255,.8), rgba(255,255,255,.95)),url('https://i.imgur.com/lXYk2l2.jpeg');
+      background:radial-gradient(1200px 500px at 20% -10%, rgba(255,255,255,.8), rgba(255,255,255,.95)),
+                 url('https://i.imgur.com/lXYk2l2.jpeg');
       background-size:cover;background-position:center right;
     }
     .badge{box-shadow:0 4px 10px rgba(21,128,61,.18)}
     .quote{box-shadow:0 10px 24px rgba(2,6,23,.06)}
-    .grad{background: linear-gradient(180deg, #0ea55a 0%, #0a9150 60%, #0a7f45 100%)}
-    .price-grad{background:linear-gradient(180deg,#facc15 0%, #f59e0b 30%, #16a34a 100%)}
+    .grad{background:linear-gradient(180deg,#0ea55a 0%,#0a9150 60%,#0a7f45 100%)}
+    .price-grad{background:linear-gradient(180deg,#facc15 0%,#f59e0b 30%,#16a34a 100%)}
     .footer-grad{background:#0b1020}
-
-    /* iframes responsivos */
-    .video-wrap{position:relative;width:100%;border-radius:16px;overflow:hidden;border:1px solid #e5e7eb;background:#000}
-    .video-wrap iframe{position:absolute;inset:0;width:100%;height:100%}
-    /* 9:16 para vídeos verticais (remove faixas pretas laterais) */
-    .video-9x16{padding-bottom:177.78%} /* 16/9 * 100 */
-    /* 16:9 se um dia quiser usar horizontal */
-    .video-16x9{padding-bottom:56.25%}
   </style>
 </head>
 <body>
   <!-- Top Bar -->
   <div class="w-full text-[13px] text-emerald-900 bg-emerald-50 border-b border-emerald-100">
     <div class="container mx-auto px-4 py-2 flex items-center gap-2">
-      <span class="inline-flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-[var(--orange)]"></span>Perfeito para uma rotina de 5 minutos ao dia</span>
+      <span class="inline-flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-[var(--orange)]"></span>
+        Perfeito para uma rotina de 5 minutos ao dia
+      </span>
     </div>
   </div>
 
@@ -62,7 +58,9 @@
         <a href="#faq" class="hover:text-[var(--brand)]">Perguntas</a>
         <a href="#garantia" class="hover:text-[var(--brand)]">Garantia</a>
       </nav>
-      <a href="#oferta" class="px-4 py-2 rounded-xl bg-[var(--brand)] text-white text-sm font-semibold soft">Quero plantar hoje</a>
+      <a href="#oferta" class="px-4 py-2 rounded-xl bg-[var(--brand)] text-white text-sm font-semibold soft">
+        Quero plantar hoje
+      </a>
     </div>
   </header>
 
@@ -74,41 +72,45 @@
           <span class="block text-emerald-700">SEMENTES</span>
           <span class="block text-[var(--orange)]">DIÁRIAS</span>
         </h1>
-        <p class="mt-5 text-zinc-700 leading-relaxed">Todo dia, uma bênção. Todo ensino, um momento. Todo momento, um legado.</p>
+        <p class="mt-5 text-zinc-700 leading-relaxed">
+          Todo dia, uma bênção. Todo ensino, um momento. Todo momento, um legado.
+        </p>
 
         <div class="quote mt-5 bg-white/95 border border-zinc-100 rounded-2xl p-4">
-          <div class="text-[13px] text-zinc-600">“Mãe, hoje vai sair o card de <span class="font-semibold text-zinc-800">bondade</span>... Ensina pra Deus me ajudar sempre?”</div>
+          <div class="text-[13px] text-zinc-600">
+            “Mãe, hoje vai sair o card de <span class="font-semibold text-zinc-800">bondade</span>...
+            Ensina pra Deus me ajudar sempre?”
+          </div>
           <div class="text-[12px] text-zinc-500 mt-1">— frase real enviada por uma assinante</div>
         </div>
 
         <div class="mt-6 flex flex-wrap gap-3">
-          <a href="#oferta" class="px-5 py-3 rounded-xl bg-[var(--brand)] text-white font-semibold soft">Quero Plantar Sementes Hoje</a>
-        </div>
-
-        <!-- VÍDEO VERTICAL (VIMEO) — somente no mobile -->
-        <div class="mt-5 md:hidden">
-          <div class="video-wrap video-9x16">
-            <iframe
-              src="https://player.vimeo.com/video/1120238082?title=0&byline=0&portrait=0"
-              frameborder="0"
-              allow="autoplay; fullscreen; picture-in-picture"
-              allowfullscreen>
-            </iframe>
-          </div>
-        </div>
-
-        <div class="mt-4 flex items-center gap-4 text-sm text-zinc-600">
-          <div class="flex -space-x-2">
-            <img class="w-8 h-8 rounded-full border-2 border-white" src="https://i.imgur.com/5c5PkPq.png" alt=""/>
-            <img class="w-8 h-8 rounded-full border-2 border-white" src="https://i.imgur.com/EmDogNU.png" alt=""/>
-            <img class="w-8 h-8 rounded-full border-2 border-white" src="https://i.imgur.com/qzy2KVS.png" alt=""/>
-          </div>
-          <span>Mais de 1.200 famílias já praticam as sementes diárias</span>
+          <a href="#oferta" class="px-5 py-3 rounded-xl bg-[var(--brand)] text-white font-semibold soft">
+            Quero Plantar Sementes Hoje
+          </a>
         </div>
       </div>
 
+      <!-- Imagem lateral (desktop) -->
       <div class="relative hidden md:block">
-        <img src="https://i.imgur.com/lXYk2l2.jpeg" alt="Livro com luz" class="rounded-3xl w-full h-[520px] object-cover card border border-zinc-100"/>
+        <img src="https://i.imgur.com/lXYk2l2.jpeg" alt="Livro com luz"
+             class="rounded-3xl w-full h-[520px] object-cover card border border-zinc-100"/>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vídeo para MOBILE (abaixo do herói) -->
+  <section class="md:hidden px-4 mt-6">
+    <div class="rounded-2xl overflow-hidden soft">
+      <!-- Wrapper 9:16 sem barras pretas -->
+      <div class="relative pb-[177.77%] h-0">
+        <iframe
+          src="https://player.vimeo.com/video/1120238082?title=0&byline=0&portrait=0&muted=1&autoplay=1&loop=1&autopause=0&dnt=1"
+          frameborder="0"
+          allow="autoplay; fullscreen; picture-in-picture"
+          allowfullscreen
+          class="absolute top-0 left-0 w-full h-full">
+        </iframe>
       </div>
     </div>
   </section>
@@ -120,7 +122,9 @@
         <div class="mt-1 text-xl">🟡</div>
         <div>
           <h3 class="text-lg md:text-xl font-semibold">Não é só um card. É um momento sagrado de conexão.</h3>
-          <p class="text-zinc-600 mt-1">Perfeito para antes do café da manhã ou na hora de dormir — quando o coração está aberto e o mundo está em silêncio.</p>
+          <p class="text-zinc-600 mt-1">
+            Perfeito para antes do café da manhã ou na hora de dormir — quando o coração está aberto e o mundo está em silêncio.
+          </p>
         </div>
       </div>
 
@@ -136,9 +140,7 @@
           <p class="text-sm text-zinc-600 mt-1">Orações curtas e versículos — 1 por dia ao longo de mais de 3 meses.</p>
         </div>
         <div class="p-6 rounded-2xl bg-white border border-zinc-100 card">
-          <img class="w-full h-40 object-cover rounded-xl"
-               src="https://i.imgur.com/v0O7iz6.png"
-               alt="Guia" />
+          <img class="w-full h-40 object-cover rounded-xl" src="https://i.imgur.com/v0O7iz6.png" alt="Guia"/>
           <h4 class="mt-4 font-semibold">Guia da Mãe Intencional</h4>
           <p class="text-sm text-zinc-600 mt-1">Atalhos práticos para conduzir o momento com leveza e propósito.</p>
         </div>
@@ -153,7 +155,7 @@
     </div>
   </section>
 
-  <!-- Depoimentos reais -->
+  <!-- Depoimentos -->
   <section id="depoimentos" class="py-16 bg-gradient-to-b from-emerald-50 to-amber-50">
     <div class="container mx-auto px-4">
       <div class="text-center">
@@ -207,32 +209,32 @@
       </div>
       <div class="mt-8 max-w-3xl mx-auto space-y-3">
         <details class="group bg-white border border-zinc-100 rounded-xl p-4 card">
-          <summary class="font-semibold cursor-pointer flex items-center justify-between">É só para mães cristãs?
-            <span class="text-zinc-400 group-open:rotate-180 transition">⌄</span>
+          <summary class="font-semibold cursor-pointer flex items-center justify-between">
+            É só para mães cristãs? <span class="text-zinc-400 group-open:rotate-180 transition">⌄</span>
           </summary>
           <p class="mt-2 text-sm text-zinc-600">Foi criado com base bíblica, mas qualquer família que deseje cultivar valores pode usar.</p>
         </details>
         <details class="group bg-white border border-zinc-100 rounded-xl p-4 card">
-          <summary class="font-semibold cursor-pointer flex items-center justify-between">É físico ou digital?
-            <span class="text-zinc-400 group-open:rotate-180 transition">⌄</span>
+          <summary class="font-semibold cursor-pointer flex items-center justify-between">
+            É físico ou digital? <span class="text-zinc-400 group-open:rotate-180 transition">⌄</span>
           </summary>
           <p class="mt-2 text-sm text-zinc-600">É <strong>digital (PDF)</strong>. Você imprime em casa ou gráfica quando quiser.</p>
         </details>
         <details class="group bg-white border border-zinc-100 rounded-xl p-4 card">
-          <summary class="font-semibold cursor-pointer flex items-center justify-between">E se eu não souber conduzir?
-            <span class="text-zinc-400 group-open:rotate-180 transition">⌄</span>
+          <summary class="font-semibold cursor-pointer flex items-center justify-between">
+            E se eu não souber conduzir? <span class="text-zinc-400 group-open:rotate-180 transition">⌄</span>
           </summary>
           <p class="mt-2 text-sm text-zinc-600">O Guia da Mãe Intencional traz um roteiro simples para você conduzir em 5 minutos.</p>
         </details>
         <details class="group bg-white border border-zinc-100 rounded-xl p-4 card">
-          <summary class="font-semibold cursor-pointer flex items-center justify-between">Como funciona na prática?
-            <span class="text-zinc-400 group-open:rotate-180 transition">⌄</span>
+          <summary class="font-semibold cursor-pointer flex items-center justify-between">
+            Como funciona na prática? <span class="text-zinc-400 group-open:rotate-180 transition">⌄</span>
           </summary>
           <p class="mt-2 text-sm text-zinc-600">Você escolhe 1 card por dia, lê a oração e o versículo, e conversa 2–3 minutos com seu filho.</p>
         </details>
         <details class="group bg-white border border-zinc-100 rounded-xl p-4 card">
-          <summary class="font-semibold cursor-pointer flex items-center justify-between">Posso usar com mais de um filho?
-            <span class="text-zinc-400 group-open:rotate-180 transition">⌄</span>
+          <summary class="font-semibold cursor-pointer flex items-center justify-between">
+            Posso usar com mais de um filho? <span class="text-zinc-400 group-open:rotate-180 transition">⌄</span>
           </summary>
           <p class="mt-2 text-sm text-zinc-600">Sim! Um mesmo momento vale para irmãos de idades diferentes.</p>
         </details>
@@ -249,7 +251,10 @@
       <div class="bg-white rounded-3xl p-8 md:p-10 max-w-3xl mx-auto card border border-white/30 text-center">
         <div class="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-700 grid place-items-center mx-auto">🛡️</div>
         <h3 class="text-xl md:text-2xl font-extrabold mt-3">GARANTIA INCONDICIONAL DE 7 DIAS</h3>
-        <p class="text-zinc-600 mt-2">Experimente SEMENTES DIÁRIAS por 7 dias. Se você sentir que o momento não fluiu de conexão, eu devolvo <strong>100% do seu investimento</strong>. Sem perguntas.</p>
+        <p class="text-zinc-600 mt-2">
+          Experimente SEMENTES DIÁRIAS por 7 dias. Se você sentir que o momento não fluiu de conexão,
+          eu devolvo <strong>100% do seu investimento</strong>. Sem perguntas.
+        </p>
         <div class="grid md:grid-cols-3 gap-4 mt-6 text-sm text-zinc-700">
           <div class="bg-emerald-50 rounded-xl p-4 border border-emerald-100">📥 <span class="font-semibold">Download imediato</span><div class="text-zinc-600">Arquivos liberados na hora</div></div>
           <div class="bg-emerald-50 rounded-xl p-4 border border-emerald-100">📦 <span class="font-semibold">Pacote completo</span><div class="text-zinc-600">Cards • Caixa • Guia</div></div>
@@ -279,16 +284,26 @@
         <!-- Formulário (mock) -->
         <div class="p-6">
           <div class="grid md:grid-cols-2 gap-4">
-            <label class="text-sm">Nome completo<input class="mt-1 w-full rounded-xl border border-zinc-200 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-200" placeholder="Seu nome"/></label>
-            <label class="text-sm">Email<input class="mt-1 w-full rounded-xl border border-zinc-200 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-200" placeholder="seu@email.com"/></label>
-            <label class="text-sm">WhatsApp<input class="mt-1 w-full rounded-xl border border-zinc-200 px-3 py-2" placeholder="(00) 00000-0000"/></label>
-            <label class="text-sm">Idade do filho<input class="mt-1 w-full rounded-xl border border-zinc-200 px-3 py-2" placeholder="Ex.: 7 anos"/></label>
+            <label class="text-sm">Nome completo
+              <input class="mt-1 w-full rounded-xl border border-zinc-200 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-200" placeholder="Seu nome"/>
+            </label>
+            <label class="text-sm">Email
+              <input class="mt-1 w-full rounded-xl border border-zinc-200 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-200" placeholder="seu@email.com"/>
+            </label>
+            <label class="text-sm">WhatsApp
+              <input class="mt-1 w-full rounded-xl border border-zinc-200 px-3 py-2" placeholder="(00) 00000-0000"/>
+            </label>
+            <label class="text-sm">Idade do filho
+              <input class="mt-1 w-full rounded-xl border border-zinc-200 px-3 py-2" placeholder="Ex.: 7 anos"/>
+            </label>
             <label class="text-sm md:col-span-2">Deixe uma mensagem (opcional)
               <textarea class="mt-1 w-full rounded-xl border border-zinc-200 px-3 py-2" rows="3" placeholder="Compartilhe algo sobre sua família"></textarea>
             </label>
           </div>
 
-          <a href="#pagar" class="mt-6 inline-flex w-full items-center justify-center gap-2 px-5 py-3 rounded-xl bg-[var(--brand)] text-white font-semibold soft">Quero plantar sementes hoje — R$ 13,90</a>
+          <a href="#pagar" class="mt-6 inline-flex w-full items-center justify-center gap-2 px-5 py-3 rounded-xl bg-[var(--brand)] text-white font-semibold soft">
+            Quero plantar sementes hoje — R$ 13,90
+          </a>
           <div class="text-[12px] text-zinc-500 mt-3 text-center">Pagamento seguro • Acesso imediato • 7 dias de garantia</div>
         </div>
       </div>
@@ -302,7 +317,9 @@
     <div class="container mx-auto px-4 py-12 grid md:grid-cols-4 gap-8">
       <div>
         <h4 class="text-white font-bold">Sementes Diárias</h4>
-        <p class="text-sm mt-2 text-zinc-400">Um pequeno momento diário, com propósito e afeto, pode transformar a atmosfera do lar. Tão simples, tão poderoso.</p>
+        <p class="text-sm mt-2 text-zinc-400">
+          Um pequeno momento diário, com propósito e afeto, pode transformar a atmosfera do lar. Tão simples, tão poderoso.
+        </p>
         <div class="flex items-center gap-3 mt-3 text-xl">
           <a href="#" aria-label="instagram">📸</a>
           <a href="#" aria-label="whatsapp">💬</a>
